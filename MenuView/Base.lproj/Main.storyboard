@@ -25,7 +25,7 @@
                                 </connections>
                             </slider>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="02S-l1-9SV" customClass="OTTMenuView">
-                                <rect key="frame" x="20" y="20" width="335" height="79.5"/>
+                                <rect key="frame" x="20" y="20" width="335" height="122"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXt-cA-SxH" userLabel="MenuView">
                                         <rect key="frame" x="126" y="30" width="82" height="61"/>
@@ -106,7 +106,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="ibProgress">
-                                        <real key="value" value="0.29999999999999999"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -134,10 +134,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qu-KF-JLh">
+                                <rect key="frame" x="20" y="172" width="335" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Автолейаут работает" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-ZL-Jja">
+                                        <rect key="frame" x="83" y="54" width="169" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mdT-ZL-Jja" firstAttribute="centerY" secondItem="0qu-KF-JLh" secondAttribute="centerY" id="MKP-ef-bC4"/>
+                                    <constraint firstItem="mdT-ZL-Jja" firstAttribute="centerX" secondItem="0qu-KF-JLh" secondAttribute="centerX" id="ZsF-g0-3tS"/>
+                                    <constraint firstAttribute="height" constant="128" id="clk-I3-Yyi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="286-Ks-7QG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5xf-yz-1x2"/>
+                            <constraint firstItem="0qu-KF-JLh" firstAttribute="trailing" secondItem="02S-l1-9SV" secondAttribute="trailing" id="8WB-Na-QGe"/>
+                            <constraint firstItem="0qu-KF-JLh" firstAttribute="leading" secondItem="02S-l1-9SV" secondAttribute="leading" id="CL8-r1-N9j"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02S-l1-9SV" secondAttribute="trailing" constant="20" id="DZh-GZ-74O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="286-Ks-7QG" secondAttribute="trailing" constant="20" id="Mmn-La-vCA"/>
                             <constraint firstItem="286-Ks-7QG" firstAttribute="top" secondItem="9XS-mW-FMI" secondAttribute="bottom" constant="8" id="PQz-3b-5jF"/>
@@ -146,6 +165,7 @@
                             <constraint firstItem="286-Ks-7QG" firstAttribute="top" secondItem="psx-Fr-iWH" secondAttribute="bottom" constant="50" id="b9X-lI-HGM"/>
                             <constraint firstItem="02S-l1-9SV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kC2-dd-m7o"/>
                             <constraint firstItem="02S-l1-9SV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qbT-wy-cSh"/>
+                            <constraint firstItem="0qu-KF-JLh" firstAttribute="top" secondItem="02S-l1-9SV" secondAttribute="bottom" constant="30" id="rsK-aB-4dB"/>
                             <constraint firstItem="9XS-mW-FMI" firstAttribute="leading" secondItem="286-Ks-7QG" secondAttribute="leading" id="tPf-FX-slH"/>
                             <constraint firstItem="psx-Fr-iWH" firstAttribute="top" secondItem="Kgw-M6-er5" secondAttribute="bottom" constant="8" id="u8y-vD-QLw"/>
                             <constraint firstItem="Kgw-M6-er5" firstAttribute="leading" secondItem="psx-Fr-iWH" secondAttribute="leading" id="zSP-Eg-rpm"/>

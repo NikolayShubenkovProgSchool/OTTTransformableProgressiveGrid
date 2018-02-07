@@ -77,7 +77,7 @@
     self.progressLabel.text = [NSString stringWithFormat:@"Прогресс %@",@(sender.value)];
     [UIView animateWithDuration:2
                           delay:0
-         usingSpringWithDamping:0.7
+         usingSpringWithDamping:0.35
           initialSpringVelocity:2
                         options:UIViewAnimationOptionBeginFromCurrentState
                      animations:^{

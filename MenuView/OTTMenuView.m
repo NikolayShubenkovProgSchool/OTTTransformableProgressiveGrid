@@ -23,6 +23,7 @@
 
 - (void)setProgress:(CGFloat)progress {
     _progress = progress;
+    [self invalidateIntrinsicContentSize];
     [self setNeedsLayout];
 }
 
@@ -39,6 +40,20 @@
     [self resetMenuViews:self.subviews];
 }
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.savedWidth = CGRectGetWidth(self.bounds);
+    [self resetMenuViews:self.interfaceBuilderViews];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self){
+        self.savedWidth = CGRectGetWidth(frame);
+    }
+    return self;
+}
+
 #pragma mark - Public
 
 - (void)resetMenuViews:(NSArray<UIView *> *)views{
@@ -48,7 +63,9 @@
         [self addSubview:obj];
     }];
     [self recalculateFrames];
+    [self invalidateIntrinsicContentSize];
     [self setNeedsLayout];
+
 }
 
 #pragma mark - Override
@@ -110,7 +127,7 @@
 - (NSArray <NSValue *> *)valuesForOneLine:(NSInteger) itemsCount yOffset:(CGFloat)offset xOffset:(CGFloat)xOffset {
     
     CGFloat widthPerView = self.savedWidth / itemsCount;
-    CGFloat height = [[self.menuViews firstObject] systemLayoutSizeFittingSize:CGSizeMake(widthPerView, CGFLOAT_MAX)].height;
+    CGFloat height = [[self.menuViews firstObject] systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     
     NSMutableArray *values = [NSMutableArray new];
     

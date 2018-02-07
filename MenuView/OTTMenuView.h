@@ -14,7 +14,7 @@ IB_DESIGNABLE
 
 @property (nonatomic, readonly) NSArray <UIView *> *menuViews;
 //не сработало
-//@property (nonatomic) IBInspectable IBOutletCollection(UIView) NSArray *interfaceBuilderViews;
+@property (nonatomic) IBOutletCollection(UIView) NSArray *interfaceBuilderViews;
 @property (nonatomic) CGFloat progress;//0 - oneline. 1 - two line
 @property (nonatomic) IBInspectable double ibProgress;
 // addd views which nows their heigth

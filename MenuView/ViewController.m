@@ -32,6 +32,7 @@
 @property (nonatomic) NSInteger viewsCount;
 @property (weak, nonatomic) IBOutlet UISlider *progress;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subviewsCountLabel;
 
 @end
 
@@ -44,9 +45,14 @@
     
     _viewsCount = viewsCount;
     
+    [self reloadViews];
+    [self.view layoutIfNeeded];
+}
+
+- (void)reloadViews {
     NSMutableArray *views = [NSMutableArray new];
     
-    for (int i = 0; i < viewsCount; i++){
+    for (int i = 0; i < self.viewsCount; i++){
         
         UILabel *view = [UILabel new];
         view.text = @"тестовый текст";
@@ -57,19 +63,26 @@
     }
     
     [self.menuView resetMenuViews:views];
-}
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
 }
 
 - (IBAction)valueChanged:(id)sender {
+    
     self.viewsCount = self.progress.value;
+    self.subviewsCountLabel.text = [NSString stringWithFormat:@"число элементов %@",@(self.viewsCount)];
 }
 
 - (IBAction)progressChanged:(UISlider *)sender {
-    self.menuView.progress = sender.value;
+    self.progressLabel.text = [NSString stringWithFormat:@"Прогресс %@",@(sender.value)];
+    [UIView animateWithDuration:1
+                          delay:0
+         usingSpringWithDamping:0.4
+          initialSpringVelocity:2
+                        options:UIViewAnimationOptionBeginFromCurrentState
+                     animations:^{
+                         self.menuView.progress = sender.value;
+                         [self.view layoutIfNeeded];
+                     } completion:nil];
 }
 
 @end

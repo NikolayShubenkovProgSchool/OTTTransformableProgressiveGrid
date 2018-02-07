@@ -11,8 +11,10 @@
 @interface OTTMenuView : UIView
 
 @property (nonatomic, readonly) NSArray <UIView *> *menuViews;
-@property (nonatomic) CGFloat progress;
+@property (nonatomic) CGFloat progress;//0 - oneline. 1 - two line
 
+// addd views which nows their heigth
+//it works like ask first view for it heigth and then apply it size to other views
 - (void)resetMenuViews:(NSArray <UIView*>*)views;
 
 @end

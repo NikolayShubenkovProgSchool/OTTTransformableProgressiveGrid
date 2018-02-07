@@ -32,13 +32,19 @@
                                 </constraints>
                             </view>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="psx-Fr-iWH">
-                                <rect key="frame" x="18" y="566" width="339" height="31"/>
+                                <rect key="frame" x="18" y="537" width="339" height="31"/>
                                 <connections>
                                     <action selector="progressChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mqz-nL-Jy0"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прогресс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kgw-M6-er5">
-                                <rect key="frame" x="20" y="537.5" width="78" height="21"/>
+                                <rect key="frame" x="20" y="508.5" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Число сабвью" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XS-mW-FMI">
+                                <rect key="frame" x="20" y="588" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -49,11 +55,13 @@
                             <constraint firstItem="286-Ks-7QG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5xf-yz-1x2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02S-l1-9SV" secondAttribute="trailing" constant="20" id="DZh-GZ-74O"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="286-Ks-7QG" secondAttribute="trailing" constant="20" id="Mmn-La-vCA"/>
+                            <constraint firstItem="286-Ks-7QG" firstAttribute="top" secondItem="9XS-mW-FMI" secondAttribute="bottom" constant="8" id="PQz-3b-5jF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="286-Ks-7QG" secondAttribute="bottom" constant="20" id="Wrf-xm-rIu"/>
                             <constraint firstItem="psx-Fr-iWH" firstAttribute="leading" secondItem="286-Ks-7QG" secondAttribute="leading" id="ZdD-h3-hps"/>
-                            <constraint firstItem="286-Ks-7QG" firstAttribute="top" secondItem="psx-Fr-iWH" secondAttribute="bottom" constant="21" id="b9X-lI-HGM"/>
+                            <constraint firstItem="286-Ks-7QG" firstAttribute="top" secondItem="psx-Fr-iWH" secondAttribute="bottom" constant="50" id="b9X-lI-HGM"/>
                             <constraint firstItem="02S-l1-9SV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kC2-dd-m7o"/>
                             <constraint firstItem="02S-l1-9SV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qbT-wy-cSh"/>
+                            <constraint firstItem="9XS-mW-FMI" firstAttribute="leading" secondItem="286-Ks-7QG" secondAttribute="leading" id="tPf-FX-slH"/>
                             <constraint firstItem="psx-Fr-iWH" firstAttribute="top" secondItem="Kgw-M6-er5" secondAttribute="bottom" constant="8" id="u8y-vD-QLw"/>
                             <constraint firstItem="Kgw-M6-er5" firstAttribute="leading" secondItem="psx-Fr-iWH" secondAttribute="leading" id="zSP-Eg-rpm"/>
                             <constraint firstItem="psx-Fr-iWH" firstAttribute="trailing" secondItem="286-Ks-7QG" secondAttribute="trailing" id="zzH-5Y-oTk"/>
@@ -64,6 +72,7 @@
                         <outlet property="menuView" destination="02S-l1-9SV" id="SBD-sz-d6O"/>
                         <outlet property="progress" destination="286-Ks-7QG" id="9jS-UA-6P1"/>
                         <outlet property="progressLabel" destination="Kgw-M6-er5" id="dEv-xK-7DT"/>
+                        <outlet property="subviewsCountLabel" destination="9XS-mW-FMI" id="WsL-j5-rwI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

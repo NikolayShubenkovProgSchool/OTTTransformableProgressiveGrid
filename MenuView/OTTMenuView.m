@@ -13,6 +13,7 @@
 
 @property (nonatomic, readwrite) NSArray <UIView *> *menuViews;
 @property (nonatomic) NSArray <OTTMenuSubviewLayout *> *layouts;
+@property (nonatomic) CGFloat savedWidth;
 
 @end
 
@@ -40,6 +41,10 @@
 #pragma mark - Override
 
 - (void)layoutSubviews {
+    if (self.savedWidth != CGRectGetWidth(self.bounds)){
+        self.savedWidth = CGRectGetWidth(self.bounds);
+        [self recalculateFrames];
+    }
     [super layoutSubviews];
     [self.layouts enumerateObjectsUsingBlock:^(OTTMenuSubviewLayout * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.menuViews objectAtIndex:idx].frame = [obj frameForProgress:self.progress];
@@ -91,7 +96,7 @@
 //будем опираться на высоту вьюх
 - (NSArray <NSValue *> *)valuesForOneLine:(NSInteger) itemsCount yOffset:(CGFloat)offset xOffset:(CGFloat)xOffset {
     
-    CGFloat widthPerView = CGRectGetWidth(self.frame) / itemsCount;
+    CGFloat widthPerView = self.savedWidth / itemsCount;
     CGFloat height = [[self.menuViews firstObject] systemLayoutSizeFittingSize:CGSizeMake(widthPerView, CGFLOAT_MAX)].height;
     
     NSMutableArray *values = [NSMutableArray new];
@@ -147,7 +152,6 @@
     }
     
     return values;
-    
 }
 
 @end

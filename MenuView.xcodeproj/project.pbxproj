@@ -15,6 +15,8 @@
 		902A723A202B8F0700CAA9AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A7239202B8F0700CAA9AB /* main.m */; };
 		902A7244202B8F0900CAA9AB /* MenuViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A7243202B8F0900CAA9AB /* MenuViewTests.m */; };
 		902A724F202B8F0900CAA9AB /* MenuViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A724E202B8F0900CAA9AB /* MenuViewUITests.m */; };
+		902A725E202B8F2E00CAA9AB /* OTTMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A725D202B8F2E00CAA9AB /* OTTMenuView.m */; };
+		902A7261202B8F8C00CAA9AB /* OTTMenuSubviewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 902A7260202B8F8C00CAA9AB /* OTTMenuSubviewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		902A724A202B8F0900CAA9AB /* MenuViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		902A724E202B8F0900CAA9AB /* MenuViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewUITests.m; sourceTree = "<group>"; };
 		902A7250202B8F0900CAA9AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902A725C202B8F2E00CAA9AB /* OTTMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTTMenuView.h; sourceTree = "<group>"; };
+		902A725D202B8F2E00CAA9AB /* OTTMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTTMenuView.m; sourceTree = "<group>"; };
+		902A725F202B8F8C00CAA9AB /* OTTMenuSubviewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTTMenuSubviewLayout.h; sourceTree = "<group>"; };
+		902A7260202B8F8C00CAA9AB /* OTTMenuSubviewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OTTMenuSubviewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,10 @@
 			children = (
 				902A722A202B8F0700CAA9AB /* AppDelegate.h */,
 				902A722B202B8F0700CAA9AB /* AppDelegate.m */,
+				902A725C202B8F2E00CAA9AB /* OTTMenuView.h */,
+				902A725D202B8F2E00CAA9AB /* OTTMenuView.m */,
+				902A725F202B8F8C00CAA9AB /* OTTMenuSubviewLayout.h */,
+				902A7260202B8F8C00CAA9AB /* OTTMenuSubviewLayout.m */,
 				902A722D202B8F0700CAA9AB /* ViewController.h */,
 				902A722E202B8F0700CAA9AB /* ViewController.m */,
 				902A7230202B8F0700CAA9AB /* Main.storyboard */,
@@ -267,7 +277,9 @@
 			files = (
 				902A722F202B8F0700CAA9AB /* ViewController.m in Sources */,
 				902A723A202B8F0700CAA9AB /* main.m in Sources */,
+				902A7261202B8F8C00CAA9AB /* OTTMenuSubviewLayout.m in Sources */,
 				902A722C202B8F0700CAA9AB /* AppDelegate.m in Sources */,
+				902A725E202B8F2E00CAA9AB /* OTTMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

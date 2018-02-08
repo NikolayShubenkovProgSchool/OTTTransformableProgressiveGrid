@@ -55,7 +55,7 @@
     for (int i = 0; i < self.viewsCount; i++){
         
         UILabel *view = [UILabel new];
-        view.text = @"\nтестовый\nтекст\n\n";
+        view.text = @"\nJust\na test\n\n";
         view.numberOfLines = 0;
         view.textAlignment = NSTextAlignmentCenter;
         view.backgroundColor = [UIColor randomColor];
@@ -70,11 +70,11 @@
 - (IBAction)valueChanged:(id)sender {
     
     self.viewsCount = self.progress.value;
-    self.subviewsCountLabel.text = [NSString stringWithFormat:@"число элементов %@",@(self.viewsCount)];
+    self.subviewsCountLabel.text = [NSString stringWithFormat:@"Subviews count %@",@(self.viewsCount)];
 }
 
 - (IBAction)progressChanged:(UISlider *)sender {
-    self.progressLabel.text = [NSString stringWithFormat:@"Прогресс %@",@(sender.value)];
+    self.progressLabel.text = [NSString stringWithFormat:@"Progress %@",@(sender.value)];
     [UIView animateWithDuration:2
                           delay:0
          usingSpringWithDamping:0.35

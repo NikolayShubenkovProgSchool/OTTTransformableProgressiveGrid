@@ -27,14 +27,6 @@
     [self setNeedsLayout];
 }
 
-- (void)setIbProgress:(double)ibProgress {
-    self.progress = ibProgress;
-}
-
-- (double)ibProgress {
-    return self.progress;
-}
-
 - (void)prepareForInterfaceBuilder {
     [super prepareForInterfaceBuilder];
     [self resetMenuViews:self.subviews];

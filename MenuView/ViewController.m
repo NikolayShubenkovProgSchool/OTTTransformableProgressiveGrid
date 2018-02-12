@@ -38,6 +38,11 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.menuView.minimumElementsInRow = 3;
+}
+
 - (void)setViewsCount:(NSInteger)viewsCount {
     if (_viewsCount == viewsCount){
         return;

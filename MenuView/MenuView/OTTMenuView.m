@@ -34,16 +34,21 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.savedWidth = CGRectGetWidth(self.bounds);
+    [self commonInit];
     [self resetMenuViews:self.interfaceBuilderViews];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self){
-        self.savedWidth = CGRectGetWidth(frame);
+        [self commonInit];
     }
     return self;
+}
+
+- (void)commonInit {
+    self.minimumElementsInRow = 0;
+    self.savedWidth = CGRectGetWidth(self.frame);
 }
 
 #pragma mark - Public
@@ -107,6 +112,10 @@
         OTTMenuSubviewLayout *layout = [OTTMenuSubviewLayout new];
         layout.startFrame = [oneLineValues[i] CGRectValue];
         layout.endFrame = [twoLineValues[i] CGRectValue];
+        //
+        if (self.menuViews.count <= self.minimumElementsInRow){
+            layout.endFrame = [oneLineValues[i] CGRectValue];
+        }
         [result addObject:layout];
     }
     

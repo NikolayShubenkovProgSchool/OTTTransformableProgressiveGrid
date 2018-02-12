@@ -15,6 +15,7 @@ IB_DESIGNABLE
 @property (nonatomic, readonly) NSArray <UIView *> *menuViews;
 //не сработало
 @property (nonatomic) IBOutletCollection(UIView) NSArray *interfaceBuilderViews;
+@property (nonatomic) NSInteger minimumElementsInRow;
 @property (nonatomic) IBInspectable CGFloat progress;//0 - oneline. 1 - two line
 // addd views which nows their heigth
 //it works like  that: ask first view for it heigth and then apply it size to other views
